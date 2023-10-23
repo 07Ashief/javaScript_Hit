@@ -38,3 +38,6 @@ const myObject = {
 //     console.log(key, ':-', value);
     
 // }
+
+//forof loops  work on this way in arry[]
+//forof loops not work on this way in object{}, we prefer the forin loops
