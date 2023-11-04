@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+    <style>
+        .bg-black {
+            background-color: black;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+<body class="bg-black" >
+    <p>Lorem ipsum dolor sit amet.</p>
+
+</body>
+
+<script>
+const div = document.createElement('div')
+console.log(div)
+div.className = "main"
+// div.id = Math.round((Math.random()*10)+1 )
+div.id = "test"
+
+div.setAttribute('title', 'generatedTitle')
+
+
+// div.innerHTML = "chai aur code"
+
+const crt =  document.createTextNode('chai aur code')
+div.appendChild(crt)
+
+document.body.appendChild(div)
+</script>
+
+</html>
