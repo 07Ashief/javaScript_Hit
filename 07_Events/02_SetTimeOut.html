@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SetTimeOut</title>
-</head>     
+</head>
 <body>
-    <h1>Set Time Out</h1>
-    <button id="start">start</button>
-    <button id="stop">stop</button>
+    <h1>Welcome to the page</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
 </body>
 <script>
-    function changeH1(){
-        document.querySelector('h1').innerHTML = `H1 changed`}
-    let timeot
     const start = document.querySelector('#start')
+    const stop = document.querySelector('#stop')
+    let timeout;
     start.addEventListener('click', function(){
-        setTimeout(() => {
-        timeot =  setTimeout(changeH1,3000)  
-        }, 3000);
+        setTimeout(function(){
+            document.querySelector('h1').innerHTML= `Content Changed`
+        },2000)
+        // timeout =  setTimeout(() => {
+        //     document.querySelector('h1').innerHTML = `H1 Changed`
+        // }, 2000);
     })
-const stop = document.querySelector('#stop')
-stop.addEventListener('click', function(){
-    clearTimeout(timeot)
-})
+    stop.addEventListener('click', function(){
+        clearTimeout(timeout)
+    })
+    
 
 </script>
 </html>
