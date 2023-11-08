@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeIntervel</title>
+</head>
+<body>
+    <h1>Welcome to the SetIntervel</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <span id="date"></span>
+</body>
+<script>
+    let showTime;
+    document.querySelector('#start').addEventListener('click',function(){
+        showTime = setInterval(function(str){
+            let date = new Date()
+            let time = date.toLocaleTimeString()
+            // document.querySelector('#date').innerHTML = time
+            document.querySelector('#date').innerHTML = `Hey ${str} now the time is ${time} `
+            
+        },1000,'buddy')
+    })
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(showTime)
+        document.querySelector('#date').innerHTML = ''
+    })
+
+</script>
+</html>
