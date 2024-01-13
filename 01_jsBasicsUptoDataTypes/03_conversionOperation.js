@@ -32,6 +32,28 @@ let str3 = str1 + str2;
 console.log(str3);
 // Output: "hello hitesh"
 
+console.log("1" + 2);
+// Concatenates the string "1" with the number 2. Output: "12"
+
+console.log(1 + "2");
+// Concatenates the number 1 with the string "2". Output: "12"
+
+console.log("1" + 2 + 2);
+// Concatenates the string "1" with the number 2, then adds another number 2. Output: "122"
+
+console.log(1 + 2 + "2");
+// Adds the numbers 1 and 2, then concatenates the result with the string "2". Output: "32"
+
+console.log((3 + 4) * 5 % 3);
+// Evaluates the expression (3 + 4) * 5 % 3. Output: 0
+
+console.log(+true);
+// Unary plus operator '+' attempts to convert the boolean true to a number. Output: 1
+
+console.log(+"");
+
+
+
 let num1, num2, num3;
 num1 = num2 = num3 = 2 + 2;
 // The variables 'num1', 'num2', and 'num3' are all assigned the value 4.
