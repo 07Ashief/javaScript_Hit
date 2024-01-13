@@ -1,68 +1,55 @@
-let score = "hitesh"
+let score = "hitesh";
+// String variable 'score' is assigned the value "hitesh".
+console.log(typeof score);
+// Output: string
 
-//console.log(typeof score);
-//console.log(typeof(score));
+let valueInNumber = Number(score);
+// 'Number()' converts the string "hitesh" to a number. Since the string is not a valid number, 'valueInNumber' becomes NaN (Not a Number).
+console.log(typeof valueInNumber);
+// Output: number
 
-let valueInNumber = Number(score)
-//console.log(typeof valueInNumber);
-//console.log(valueInNumber);
+let isLoggedIn = "hitesh";
+let booleanIsLoggedIn = Boolean(isLoggedIn);
+// 'Boolean()' converts the string "hitesh" to a boolean. Any non-empty string is treated as true, so 'booleanIsLoggedIn' becomes true.
+console.log(booleanIsLoggedIn);
+// Output: true
 
+let someNumber = 33;
+let stringNumber = String(someNumber);
+// 'String()' converts the number 33 to a string. 'stringNumber' becomes the string "33".
+console.log(typeof stringNumber);
+// Output: string
 
-// "33" => 33
-// "33abc" => NaN
-//  true => 1; false => 0
+let negValue = -value;
+// Unary minus operator '-' negates the value of 'value'. If 'value' was 3, 'negValue' becomes -3.
+console.log(negValue);
+// Output: -3
 
-let isLoggedIn = "hitesh"
+let str1 = "hello";
+let str2 = " hitesh";
+let str3 = str1 + str2;
+// String concatenation using the '+' operator. 'str3' becomes "hello hitesh".
+console.log(str3);
+// Output: "hello hitesh"
 
-let booleanIsLoggedIn = Boolean(isLoggedIn)
-//  console.log(booleanIsLoggedIn);
+let num1, num2, num3;
+num1 = num2 = num3 = 2 + 2;
+// The variables 'num1', 'num2', and 'num3' are all assigned the value 4.
+console.log(num1, num2, num3);
+// Output: 4 4 4
 
-// 1 => true; 0 => false
-// "" => false
-// "hitesh" => true
-
-let someNumber = 33
-
-let stringNumber = String(someNumber)
-// console.log(stringNumber);
-// console.log(typeof stringNumber);
-
-// *********************** Operations ***********************
-
-let value = 3
-let negValue = -value
-// console.log(negValue);
-
-// console.log(2+2);
-// console.log(2-2);
-// console.log(2*2);
-// console.log(2**3);
-// console.log(2/3);
-// console.log(2%3);
-
-let str1 = "hello"
-let str2 = " hitesh"
-
-let str3 = str1 + str2
-// console.log(str3);
-
-// console.log("1" + 2);
-// console.log(1 + "2");
-// console.log("1" + 2 + 2);
-// console.log(1 + 2 + "2");
-
-// console.log( (3 + 4) * 5 % 3);
-
-// console.log(+true);
-// console.log(+"");
-
-let num1, num2, num3
-
-num1 = num2 = num3 = 2 + 2
-
-let gameCounter = 100
+let gameCounter = 100;
 ++gameCounter;
+// Incrementing 'gameCounter' by 1 using the pre-increment operator '++'. 'gameCounter' becomes 101.
 console.log(gameCounter);
+// Output: 101
 
-// link to study
-// https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
+let x = 3;
+const y = x++;
+console.log(`x:${x}, y:${y}`);
+// Post-incrementing 'x' by 1 and assigning the original value to 'y'. Outputs: "x:4, y:3".
+
+let a = 3;
+const b = ++a;
+console.log(`a:${a}, b:${b}`);
+// Pre-incrementing 'a' by 1 and assigning the updated value to 'b'. Outputs: "a:4, b:4".

@@ -1,27 +1,49 @@
-const accountId = 12345
-let accountName = 'Ashif'
-var accountPassword = 345678
-accountCity = 'chennai'
+const accountId = 12345;
+// 'const' declares a constant variable 'accountId' with the value 12345. Constants cannot be reassigned.
+
+let accountName = 'Ashif';
+// 'let' declares a variable 'accountName' with the initial value 'Ashif'.
+
+var accountPassword = 345678;
+// 'var' declares a variable 'accountPassword' with the initial value 345678. Note: 'var' has issues with block scope and functional scope.
+
+accountCity = 'chennai';
+// Variable 'accountCity' is created without using 'let', 'const', or 'var'. This implicitly creates a global variable.
+
 let accountState;
+// 'let' declares a variable 'accountState' without assigning an initial value.
 
-// console.log(accountName)
-// console.table([accountId,accountName,accountPassword,accountCity])
+// console.log(accountName);
+// Outputs the value of 'accountName' to the console.
 
-// accountId = 987654  not allowed because Assignment to constant variable.
+// console.table([accountId, accountName, accountPassword, accountCity]);
+// Outputs a table to the console with the values of 'accountId', 'accountName', 'accountPassword', and 'accountCity'.
 
-accountEmail = "hc@hc.com"
-accountPassword = "21212121"
-accountCity = "Bengaluru"
+// accountId = 987654; // Not allowed because Assignment to a constant variable.
+
+accountEmail = "hc@hc.com";
+// Variable 'accountEmail' is created without using 'let', 'const', or 'var'. This implicitly creates a global variable.
+
+accountPassword = "21212121";
+// 'accountPassword' is reassigned with a new value.
+
+accountCity = "Bengaluru";
+// 'accountCity' is reassigned with a new value.
 
 console.log(accountId);
+// Outputs the value of 'accountId' to the console.
 
 /*
 Prefer not to use var
-because of issue in block scope and functional scope
+because of issues in block scope and functional scope
 */
 
+console.table([accountId, accountEmail, accountPassword, accountCity, accountState]);
+// Outputs a table to the console with the values of 'accountId', 'accountEmail', 'accountPassword', 'accountCity', and 'accountState'.
 
-console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
+
+
+
 
 
 /* Notes
