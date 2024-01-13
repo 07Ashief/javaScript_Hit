@@ -44,12 +44,22 @@ let gameCounter = 100;
 console.log(gameCounter);
 // Output: 101
 
+/** *******Increment Operator********** */
+
 let x = 3;
 const y = x++;
+// Declaring a variable 'x' with the value 3, and a constant variable 'y' assigned the current value of 'x' (3) using post-increment.
+// Post-increment ('x++') uses the current value of 'x' in the expression first, and then increments 'x' by 1.
+
 console.log(`x:${x}, y:${y}`);
-// Post-incrementing 'x' by 1 and assigning the original value to 'y'. Outputs: "x:4, y:3".
+// Outputs the values of 'x' and 'y'. Expected output: "x:4, y:3"
+// After the operation, 'x' is incremented to 4, while 'y' holds the original value of 'x' before the increment.
 
 let a = 3;
 const b = ++a;
+// Declaring a variable 'a' with the value 3, and a constant variable 'b' assigned the updated value of 'a' (4) using pre-increment.
+// Pre-increment ('++a') increments 'a' by 1 first, and then uses the updated value.
+
 console.log(`a:${a}, b:${b}`);
-// Pre-incrementing 'a' by 1 and assigning the updated value to 'b'. Outputs: "a:4, b:4".
+// Outputs the values of 'a' and 'b'. Expected output: "a:4, b:4"
+// Both 'a' and 'b' end up with the same value after the pre-increment operation.
