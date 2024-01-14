@@ -51,3 +51,55 @@ console.log(typeof anotherId);
 
 // Link to ECMAScript Specification for 'typeof':
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+/** Memory Flow of Data Types */
+
+// Stack (Primitive)
+// Variables 'myYoutubename' and 'anothername' exist in the stack and hold primitive data.
+
+let myYoutubename = 'hiteshchoudarydotcom';
+// Variable 'myYoutubename' is assigned a string value in the stack.
+
+let anothername = myYoutubename;
+// Variable 'anothername' is assigned the same string value as 'myYoutubename'.
+
+console.log(anothername);
+// Outputs: "hiteshchoudarydotcom"
+
+anothername = 'chaiaurcode';
+// Variable 'anothername' is reassigned a new string value.
+
+console.log(myYoutubename);
+// Outputs: "hiteshchoudarydotcom"
+// 'myYoutubename' remains unchanged as it holds its own copy of the string.
+
+console.log(anothername);
+// Outputs: "chaiaurcode"
+// 'anothername' is updated with the new string value.
+
+// Heap (Reference or Non-Primitive)
+// Objects in JavaScript are stored in the heap, and variables hold references to their memory locations.
+
+let userOne = {
+    email: 'user@google.com',
+    upi: 'user@ybl'
+};
+// Variable 'userOne' holds a reference to an object in the heap.
+
+let userTwo = userOne;
+// Variable 'userTwo' is assigned the same reference as 'userOne'.
+
+userTwo.email = 'hitesh@gmail.com';
+// Modifying the object through either reference affects both variables.
+
+console.log(userOne);
+// Outputs: { email: 'hitesh@gmail.com', upi: 'user@ybl' }
+// 'userOne' reflects the change made through 'userTwo'.
+
+console.log(userTwo);
+// Outputs: { email: 'hitesh@gmail.com', upi: 'user@ybl' }
+// 'userTwo' reflects the change made through 'userOne'.
+
+// Note: The output is affected by the modification in either variable due to the shared reference.
+
