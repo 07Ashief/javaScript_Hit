@@ -19,6 +19,7 @@ const allHeros = marvel_heros.concat(dc_heros);
 console.log(allHeros);
 // Outputs: [ 'thor', 'Ironman', 'spiderman', [ 'superman', 'flash', 'batman' ], 'superman', 'flash', 'batman' ]
 
+// spread operator
 const all_new_heros = [...marvel_heros, ...dc_heros];
 // Uses the spread operator to concatenate 'marvel_heros' and 'dc_heros' into 'all_new_heros'.
 
