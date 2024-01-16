@@ -73,8 +73,11 @@ const course = {
     courseInstructor: "hitesh"
 };
 
-const {courseInstructor: instructor} = course;
+const {courseInstructor} = course;
 // Destructuring the 'course' object to get the value of 'courseInstructor'.
+
+const {courseInstructor: instructor} = course;
+// Renaming the key of the object by using the above method
 
 console.log(instructor);
 // Outputs: hitesh
