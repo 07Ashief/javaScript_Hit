@@ -45,8 +45,8 @@ const chai = () => {
 }
 
 chai();
-/*
 const addTwo = (num1, num2) => num1 + num2;  // Arrow function with implicit return
+/*
 const addTwo = (num1, num2) => (num1 + num2);  // Arrow function with explicit return
 const addTwo = (num1, num2) => ({ username: "hitesh" });  // Arrow function returning an object
 
