@@ -1,54 +1,59 @@
+/*
+Arrow Functions and 'this' Context:
+
+- Arrow functions have a concise syntax and do not bind their own 'this' value.
+- Arrow functions do not have their own 'this', so they inherit 'this' from the enclosing scope.
+- Regular functions have their own 'this' context.
+
+Output Comments:
+- Output comments are provided for each line of code to explain the expected result.
+
+*/
+
 const user = {
     username: "hitesh",
     price: 999,
 
     welcomeMessage: function() {
-        console.log(`${this.username} , welcome to website`);
+        console.log(`${this.username}, welcome to the website`);
         console.log(this);
     }
-
 }
 
-// user.welcomeMessage()
-// user.username = "sam"
-// user.welcomeMessage()
+user.welcomeMessage();  // Output: "hitesh, welcome to the website" and the 'user' object
 
-// console.log(this);
+user.username = "sam";
+user.welcomeMessage();  // Output: "sam, welcome to the website" and the updated 'user' object
 
-// function chai(){
-//     let username = "hitesh"
-//     console.log(this.username);
-// }
+console.log(this);  // Output: The global 'this' object
 
-// chai()
-
-// const chai = function () {
-//     let username = "hitesh"
-//     console.log(this.username);
-// }
-
-const chai =  () => {
-    let username = "hitesh"
-    console.log(this);
+function chai() {
+    let username = "hitesh";
+    console.log(this.username);  // Output: undefined (no 'username' property in the global 'this' object)
 }
 
+chai();
 
-// chai()
+const chai = function() {
+    let username = "hitesh";
+    console.log(this.username);  // Output: undefined (no 'username' property in the global 'this' object)
+}
 
-// const addTwo = (num1, num2) => {
-//     return num1 + num2
-// }
+const chai = () => {
+    let username = "hitesh";
+    console.log(this);  // Output: The global 'this' object
+}
 
-// const addTwo = (num1, num2) =>  num1 + num2
+chai();
+/*
+const addTwo = (num1, num2) => num1 + num2;  // Arrow function with implicit return
+const addTwo = (num1, num2) => (num1 + num2);  // Arrow function with explicit return
+const addTwo = (num1, num2) => ({ username: "hitesh" });  // Arrow function returning an object
 
-// const addTwo = (num1, num2) => ( num1 + num2 )
+console.log(addTwo(3, 4));  // Output: 7
 
-const addTwo = (num1, num2) => ({username: "hitesh"})
+const myArray = [2, 5, 3, 7, 8];
 
+myArray.forEach();  // This line would result in an error since forEach() requires a callback function.
 
-console.log(addTwo(3, 4))
-
-
-// const myArray = [2, 5, 3, 7, 8]
-
-// myArray.forEach()
+*/
