@@ -1,4 +1,8 @@
 // For Loops in JavaScript
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+}
 
 // Simple 'for' loop
 for (let i = 0; i <= 10; i++) {
