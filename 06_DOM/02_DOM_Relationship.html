@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM | Chai aur code</title>
+    <title>DOM | Chai aur code</title>\
     <style>
         .bg-black {
             background-color: black;
@@ -12,7 +12,8 @@
         }
     </style>
 </head>
-<body class="bg-black" >
+<body class="bg-black">
+    <!-- Body with a parent div containing child divs -->
     <div class="parent">
         <!-- this is a comment -->
         <div class="day">Monday</div>
@@ -20,26 +21,41 @@
         <div class="day">Wednesday</div>
         <div class="day">Thursday</div>
     </div>
+    <!-- Script section for JavaScript -->
+    <script>
+        // Selecting the parent div with the class 'parent'
+        const parent = document.querySelector('.parent');
+        console.log("Selected parent:", parent); // Output: <div class="parent">...</div>
+
+        // Logging the child elements of the parent
+        console.log("Child elements:", parent.children); // Output: HTMLCollection of child divs
+
+        // Logging the inner HTML of the second child
+        console.log("Inner HTML of second child:", parent.children[1].innerHTML); // Output: Tuesday
+
+        // Looping through all child elements and logging inner HTML
+        for (let i = 0; i < parent.children.length; i++) {
+            console.log(`Child ${i + 1} inner HTML:`, parent.children[i].innerHTML);
+        }
+
+        // Changing the text color of the second child to orange
+        parent.children[1].style.color = "orange";
+        console.log("Color changed for second child.");
+
+        // Logging the first and last child elements
+        console.log("First child:", parent.firstElementChild); // Output: <div class="day">Monday</div>
+        console.log("Last child:", parent.lastElementChild); // Output: <div class="day">Thursday</div>
+
+        // Selecting the first element with the class 'day'
+        const dayOne = document.querySelector('.day');
+        console.log("Selected element with class 'day':", dayOne); // Output: <div class="day">Monday</div>
+
+        // Logging the parent element, and the next element sibling
+        console.log("Parent element:", dayOne.parentElement); // Output: <div class="parent">...</div>
+        console.log("Next element sibling:", dayOne.nextElementSibling); // Output: <div class="day">Tuesday</div>
+
+        // Logging all child nodes of the parent (including text nodes)
+        console.log("All child nodes:", parent.childNodes);
+    </script>
 </body>
-<script>
-    const parent = document.querySelector('.parent')
-    // console.log(parent);
-    // console.log(parent.children);
-    // console.log(parent.children[1].innerHTML);
-
-    // for (let i = 0; i < parent.children.length; i++) {
-    //      console.log(parent.children[i].innerHTML);
-        
-    // }
-    parent.children[1].style.color = "orange"
-    // console.log(parent.firstElementChild);
-    // console.log(parent.lastElementChild);
-
-    const dayOne = document.querySelector('.day')
-    // console.log(dayOne);
-    // console.log(dayOne.parentElement);
-    // console.log(dayOne.nextElementSibling);
-
-    console.log("NODES: ", parent.childNodes);
-</script>
 </html>

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags and title -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM | Chai aur code</title>
+    <!-- Internal style with a class -->
     <style>
         .bg-black {
             background-color: black;
@@ -12,27 +14,37 @@
         }
     </style>
 </head>
-<body class="bg-black" >
+<body class="bg-black">
+    <!-- Body with a paragraph -->
     <p>Lorem ipsum dolor sit amet.</p>
+    <!-- Script section for JavaScript -->
+    <script>
+        // Creating a new div element
+        const div = document.createElement('div');
+        console.log("Created div element:", div); // Output: <div></div>
 
+        // Adding class and id to the div
+        div.className = "main";
+        div.id = "test";
+        console.log("Class and id added:", div); // Output: <div class="main" id="test"></div>
+
+        // Setting attribute 'title' with a generated title
+        div.setAttribute('title', 'generatedTitle');
+        console.log("Attribute 'title' set:", div); // Output: <div class="main" id="test" title="generatedTitle"></div>
+
+        // Setting inner HTML content of the div
+        div.innerHTML = "chai aur code";
+        console.log("Inner HTML set:", div); // Output: <div class="main" id="test" title="generatedTitle">chai aur code</div>
+
+        // Creating a text node and appending it to the div
+        const crt = document.createTextNode('chai aur code');
+        div.appendChild(crt);
+        console.log("Text node appended:", div); // Output: <div class="main" id="test" title="generatedTitle">chai aur code</div>
+
+        // Appending the created div to the body
+        document.body.appendChild(div);
+        console.log("Div appended to the body.");
+
+    </script>
 </body>
-
-<script>
-const div = document.createElement('div')
-console.log(div)
-div.className = "main"
-// div.id = Math.round((Math.random()*10)+1 )
-div.id = "test"
-
-div.setAttribute('title', 'generatedTitle')
-
-
-// div.innerHTML = "chai aur code"
-
-const crt =  document.createTextNode('chai aur code')
-div.appendChild(crt)
-
-document.body.appendChild(div)
-</script>
-
 </html>
