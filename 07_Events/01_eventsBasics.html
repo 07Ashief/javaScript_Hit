@@ -28,13 +28,15 @@
    </div>
 </body>
 <script>
+    // Commented out code using different event handling approaches
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
     // }
 
-     // attachEvent()
+    // attachEvent()
     // jQuery - on
 
+    // Commented out code using various event listeners with different events and behaviors
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
@@ -55,65 +57,27 @@
     //     console.log("google clicked");
     // }, false)
    
-    
+    // New event listener added to the 'images' element for the 'click' event
     document.querySelector('#images').addEventListener('click', function(e){
+        // Logging the tag name of the clicked element
         console.log(e.target.tagName);
+
+        // Checking if the clicked element is an image (IMG tag)
         if (e.target.tagName === 'IMG') {
+            // Logging the id of the clicked image
             console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove()
+
+            // Removing the parent element of the clicked image
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
         }
-    
-        
     })
     
-    //removeIt.parentNode.removeChild(removeIt)
+    // Commented out code for removing the parent node
+    // removeIt.parentNode.removeChild(removeIt)
 </script>
+
 </html>
 
 
 
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Event Properties Example</title>
-</head>
-<body>
-    <button id="myButton">Click Me</button>
-
-    <script>
-        const myButton = document.getElementById('myButton');
-
-        function handleClick(event) {
-            // Type of the event (e.g., 'click')
-            console.log("Event type: " + event.type);
-
-            // Timestamp when the event occurred
-            console.log("Timestamp: " + event.timeStamp);
-
-            // Checking if the default action is prevented
-            console.log("Default action prevented: " + event.defaultPrevented);
-
-            // The element that triggered the event
-            console.log("Event target: " + event.target);
-
-            // X and Y coordinates of the mouse pointer relative to the viewport
-            console.log("Mouse X coordinate: " + event.clientX);
-            console.log("Mouse Y coordinate: " + event.clientY);
-
-            // Checking if modifier keys were pressed (Alt, Ctrl, Shift)
-            console.log("Alt key pressed: " + event.altKey);
-            console.log("Ctrl key pressed: " + event.ctrlKey);
-            console.log("Shift key pressed: " + event.shiftKey);
-
-            // KeyCode for keyboard events (for demonstration, not applicable to click events)
-            // When handling keyboard events, this would represent the specific key pressed.
-            // For click events, this value won't be relevant.
-            console.log("Key code: " + event.keyCode);
-        }
-
-        // Adding a click event listener to the button
-        myButton.addEventListener('click', handleClick);
-    </script>
-</body>
-</html> -->
