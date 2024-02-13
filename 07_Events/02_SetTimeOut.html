@@ -11,21 +11,26 @@
     <button id="stop">Stop</button>
 </body>
 <script>
+    // Selecting elements with IDs 'start' and 'stop'
     const start = document.querySelector('#start')
     const stop = document.querySelector('#stop')
-    let timeout;
-    start.addEventListener('click', function(){
-        setTimeout(function(){
-            document.querySelector('h1').innerHTML= `Content Changed`
-        },2000)
-        // timeout =  setTimeout(() => {
-        //     document.querySelector('h1').innerHTML = `H1 Changed`
-        // }, 2000);
-    })
-    stop.addEventListener('click', function(){
-        clearTimeout(timeout)
-    })
-    
 
+    // Declaring a variable to store the timeout ID
+    let timeout;
+
+    // Adding a click event listener to the 'start' button
+    start.addEventListener('click', function(){
+        // Setting a timeout to change the content of an h1 element after 2 seconds
+        timeout = setTimeout(function(){
+            document.querySelector('h1').innerHTML= `Content Changed`
+        }, 2000);
+    })
+
+    // Adding a click event listener to the 'stop' button
+    stop.addEventListener('click', function(){
+        // Clearing the timeout to stop the scheduled content change
+        clearTimeout(timeout);
+    })
 </script>
+
 </html>
