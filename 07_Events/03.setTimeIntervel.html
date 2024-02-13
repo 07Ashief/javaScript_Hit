@@ -12,20 +12,28 @@
     <span id="date"></span>
 </body>
 <script>
+    // Declaring a variable to store the interval ID
     let showTime;
-    document.querySelector('#start').addEventListener('click',function(){
+
+    // Adding a click event listener to the 'start' button
+    document.querySelector('#start').addEventListener('click', function(){
+        // Setting an interval to update the content of an element with the current time every second
         showTime = setInterval(function(str){
-            let date = new Date()
-            let time = date.toLocaleTimeString()
-            // document.querySelector('#date').innerHTML = time
-            document.querySelector('#date').innerHTML = `Hey ${str} now the time is ${time} `
-            
-        },1000,'buddy')
+            let date = new Date();
+            let time = date.toLocaleTimeString();
+            // Updating the content of an element with the current time
+            document.querySelector('#date').innerHTML = `Hey ${str}, now the time is ${time}`;
+        }, 1000, 'buddy'); // Passing the string 'buddy' as an argument to the interval function
     })
+
+    // Adding a click event listener to the 'stop' button
     document.querySelector('#stop').addEventListener('click', function(){
-        clearInterval(showTime)
-        document.querySelector('#date').innerHTML = ''
+        // Clearing the interval to stop the scheduled updates
+        clearInterval(showTime);
+        // Resetting the content of the element to an empty string
+        document.querySelector('#date').innerHTML = '';
     })
 
 </script>
+
 </html>
