@@ -15,17 +15,58 @@
     </ul>
 </body>
 <script>
-    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
-    xhr.onreadystatechange = function(){
-        console.log(xhr.readyState);
-        if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText)
-            console.log(typeof data);
-            console.log(data.followers);
-        }
+    // Creating a variable to store the API request URL
+const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+
+// Creating a new XMLHttpRequest object
+const xhr = new XMLHttpRequest();
+
+// Opening a GET request to the specified URL
+xhr.open('GET', requestUrl);
+
+// Adding an event listener to handle changes in the XMLHttpRequest state
+xhr.onreadystatechange = function(){
+    // Logging the current state of the XMLHttpRequest (0 to 4)
+    console.log(xhr.readyState);
+
+    // Checking if the request is complete (state 4)
+    if (xhr.readyState === 4) {
+        // Parsing the responseText (assumed to be JSON) into a JavaScript object
+        const data = JSON.parse(this.responseText);
+
+        // Logging the data type and the followers property from the response
+        console.log(typeof data);
+        console.log(data.followers);
     }
-    xhr.send();
+}
+
+// Sending the XMLHttpRequest to initiate the request
+xhr.send();
+
 </script>
+
+
+<!--  Notes
+Explanation:
+1. **Request URL:** The URL of the GitHub API endpoint for a specific user ('hiteshchoudhary' in this case).
+
+2. **XMLHttpRequest:** Creating a new instance of the XMLHttpRequest object for making HTTP requests.
+
+3. **Open Method:** Configuring the request with the open method, specifying the HTTP method (GET) and the request URL.
+
+4. **onreadystatechange Event:** Adding an event listener to track changes in the XMLHttpRequest's state.
+
+5. **ReadyState Logging:** Logging the current state of the XMLHttpRequest during its lifecycle (0 to 4).
+
+6. **Response Handling:** Checking if the request is complete (readyState 4) and parsing the responseText into a JavaScript object.
+
+7. **Logging Data:** Logging the type of the parsed data and a specific property ('followers' in this case).
+
+8. **Send Method:** Sending the XMLHttpRequest to initiate the request to the specified URL.
+
+This code fetches data from the GitHub API for the user 'hiteshchoudhary' and logs information about the user's followers.
+
+ -->
+
+
 </html>
